@@ -1,0 +1,6 @@
+- name: GitHub
+  url: github.com
+  address: phishing@github.com
+- name: eBay Kleinanzeigen
+  url: https://themen.ebay-kleinanzeigen.de/hilfe/kommunikation/phishing/
+  address: spoof@ebay-Kleinanzeigen.de
