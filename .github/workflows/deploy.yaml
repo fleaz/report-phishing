@@ -1,0 +1,28 @@
+name: Deployment
+
+on:
+  push:
+    branches:
+      - 'main'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10' 
+
+      - run: pip install -r requirements.txt
+
+      - run: python generate.py
+
+      - uses: jakejarvis/s3-sync-action@master
+        env:
+          AWS_S3_BUCKET: "report-phishing"
+          AWS_S3_ENDPOINT: "s3.fleaz.me"
+          AWS_ACCESS_KEY_ID: "${{ secrets.ACCESS_KEY }}"
+          AWS_SECRET_ACCESS_KEY: "${{ secrets.SECRET_KEY }}"
+          SOURCE_DIR: "index.html"
