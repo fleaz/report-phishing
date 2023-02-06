@@ -19,6 +19,9 @@ jobs:
 
       - run: python generate.py
 
+      - id: install-aws-cli
+        uses: unfor19/install-aws-cli-action@master
+
       - run: aws --endpoint-url "https://s3.fleaz.me"  s3 cp index.html s3://report-phishing
         env:
           AWS_ACCESS_KEY_ID: "${{ secrets.ACCESS_KEY }}"
