@@ -19,10 +19,7 @@ jobs:
 
       - run: python generate.py
 
-      - uses: jakejarvis/s3-sync-action@master
+      - run: aws --endopint-url "https://s3.fleaz.me"  s3 cp index.html s3://report-phishing
         env:
-          AWS_S3_BUCKET: "report-phishing"
-          AWS_S3_ENDPOINT: "https://s3.fleaz.me"
           AWS_ACCESS_KEY_ID: "${{ secrets.ACCESS_KEY }}"
           AWS_SECRET_ACCESS_KEY: "${{ secrets.SECRET_KEY }}"
-          SOURCE_DIR: "index.html"
