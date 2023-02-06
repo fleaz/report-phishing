@@ -1,5 +1,56 @@
-<ul>
-{% for entry in data %}
-<li>{{ entry.name }}</li>
-{% endfor %}
-</ul>
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./pico.min.css">
+    <style>
+        #github-banner {
+            float: right;
+        }
+    </style>
+    <title>Report Phishing</title>
+</head>
+
+<body>
+    <!-- Github Ribbon -->
+    <a id="github-banner" target="_blank" href="https://github.com/fleaz/report-phishing"><img decoding="async" loading="lazy" width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_red_aa0000.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
+
+    <main class="container">
+        <p>
+            If you have an email address, you probably get some <a href="https://en.wikipedia.org/wiki/Phishing">phishing email</a> regularly send to your inbox.
+            Some companies have a special address where you can report such emails, so their IT security department can analyse them and take actions.
+        </p>
+        <p>
+            This page aims to become a collection point for companies that offer such a service, so you can easily look up the right address to report such an email if you got one.
+        </p>
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">Company</th>
+                    <th scope="col">More informations</th>
+                    <th scope="col">Forward phishing to</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for entry in data %}
+                <tr>
+                    <td>{{ entry.name }}</td>
+
+                    {% for link in entry.links %}
+                    <td><a target="_blank" href="{{ link.url }}"> {{ link.lang }} </a></td>
+                    {% else %}
+                    <td>-</td>
+                    {% endfor %}
+
+                    <td><a href="mailto:{{ entry.address }}">{{ entry.address }}</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+    </main>
+</body>
+
+</html>

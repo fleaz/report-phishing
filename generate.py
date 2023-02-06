@@ -10,5 +10,9 @@ template = env.get_template('template.j2')
 with open("data.yaml","rb") as fh:
     data = yaml.safe_load(fh)
 
+data = sorted(data, key=lambda x : x["name"].lower())
+
 with open("index.html", 'w') as fh:
     fh.write(template.render(data = data))
+
+print("Done")

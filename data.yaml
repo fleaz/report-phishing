@@ -1,6 +1,28 @@
+---
+
 - name: GitHub
-  url: github.com
-  address: phishing@github.com
+  address: "phishing@github.com"
+
 - name: eBay Kleinanzeigen
-  url: https://themen.ebay-kleinanzeigen.de/hilfe/kommunikation/phishing/
+  links:
+    - lang: "DE"
+      url: "https://themen.ebay-kleinanzeigen.de/hilfe/kommunikation/phishing/"
   address: spoof@ebay-Kleinanzeigen.de
+
+- name: Facebook
+  address: phish@fb.com
+  links:
+    - lang: "EN"
+      url: "https://www.facebook.com/help/225602007465207"
+
+- name: Sparkasse
+  address: warnung@sparkasse.de
+  links:
+    - lang: "DE"
+      url: "https://www.sparkasse.de/service/sicherheit-im-internet/was-ist-phishing.html"
+
+- name: DKB
+  address: phishingverdacht@dkb.de 
+  links:
+    - lang: "DE"
+      url: "https://bank.dkb.de/fragen-antworten/wie-melde-ich-eine-phishing-mail-oder-eine-verdaechtige-sms"
