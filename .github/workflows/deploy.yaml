@@ -19,7 +19,7 @@ jobs:
 
       - run: python generate.py
 
-      - run: aws --endpoint-url "https://s3.fleaz.me"  s3 cp index.html s3://report-phishing
+      - run: aws --endpoint-url "https://s3.fleaz.me"  s3 sync dist/ s3://report-phishing/
         env:
           AWS_DEFAULT_REGION: "us-east-1"
           AWS_ACCESS_KEY_ID: "${{ secrets.ACCESS_KEY }}"

@@ -12,7 +12,7 @@ with open("data.yaml","rb") as fh:
 
 data = sorted(data, key=lambda x : x["name"].lower())
 
-with open("index.html", 'w') as fh:
+with open("dist/index.html", 'w') as fh:
     fh.write(template.render(data = data))
 
 print("Done")
