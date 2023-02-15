@@ -44,7 +44,11 @@
                     <td>-</td>
                     {% endfor %}
 
+                    {% if entry.address %}
                     <td><a href="mailto:{{ entry.address }}">{{ entry.address }}</a></td>
+                    {% else %}
+                    <td>-</td>
+                    {% endif %}
                 </tr>
                 {% endfor %}
             </tbody>
