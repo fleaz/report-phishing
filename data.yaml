@@ -28,7 +28,7 @@
       url: "https://bank.dkb.de/fragen-antworten/wie-melde-ich-eine-phishing-mail-oder-eine-verdaechtige-sms"
 
 - name: IONOS
-  address: "--"
+  address: ""
   links:
     - lang: "DE"
       url: "https://phishing-contact.ionos.de/de"
