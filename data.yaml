@@ -32,3 +32,9 @@
   links:
     - lang: "DE"
       url: "https://phishing-contact.ionos.de/de"
+
+- name: Strato
+  address: ""
+  links:
+    - lang: "DE"
+      url: "https://phishing-contact.strato.de/"
