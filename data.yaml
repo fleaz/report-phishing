@@ -3,6 +3,12 @@
 - name: GitHub
   address: "phishing@github.com"
 
+- name: GitLab
+  links:
+    - lang: "EN"
+      url: "https://about.gitlab.com/handbook/security/#manual-submission-of-phishing-email-to-phishinggitlabcom"
+  address: "phishing@gitlab.com"
+
 - name: eBay Kleinanzeigen
   links:
     - lang: "DE"
