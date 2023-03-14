@@ -44,3 +44,9 @@
   links:
     - lang: "DE"
       url: "https://phishing-contact.strato.de/"
+
+- name: Deutsche Post
+  address: phishing-dpdhl@deutschepost.de
+  links:
+    - lang: "DE"
+      url: "https://www.deutschepost.de/de/w/warnung-vor-gefaelschten-mails.html"
