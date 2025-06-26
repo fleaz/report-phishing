@@ -21,6 +21,6 @@ jobs:
 
       - run: aws --endpoint-url "https://s3.fleaz.me"  s3 sync dist/ s3://report-phishing/
         env:
-          AWS_DEFAULT_REGION: "us-east-1"
+          AWS_DEFAULT_REGION: "garage"
           AWS_ACCESS_KEY_ID: "${{ secrets.ACCESS_KEY }}"
           AWS_SECRET_ACCESS_KEY: "${{ secrets.SECRET_KEY }}"
